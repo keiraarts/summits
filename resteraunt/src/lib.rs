@@ -19,7 +19,7 @@ pub fn eat_at_restaurant() {
     let mut meal = back_of_house::Breakfast::summer("Rye");
     // Change our mind about what bread we'd like
     meal.toast = String::from("Wheat");
-    println!("I'd like {} toast please", meal.toast);
+    println!("I'd like {} toast please,", meal.toast);
 
     // The next line won't compile if we uncomment it; we're not allowed
     // to see or modify the seasonal fruit that comes with the meal
