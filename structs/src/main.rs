@@ -1,19 +1,22 @@
 #[derive(Debug)]
-struct Rectangle {
-    width: u32,
-    height: u32,
+
+struct Rectangle<T, U> {
+    width: T,
+    height: U,
 }
 
-impl Rectangle {
+impl Rectangle<u32, u32> {
+    // methods
     fn area(&self) -> u32 {
         self.width * self.height
     }
 
-    fn can_hold(&self, other: &Rectangle) -> bool {
+    fn can_hold(&self, other: &Rectangle<u32, u32>) -> bool {
         self.width > other.width && self.height > other.height
     }
 
-    fn square(size: u32) -> Rectangle {
+    // associated functions
+    fn square(size: u32) -> Rectangle<u32, u32> {
         Rectangle {
             width: size,
             height: size,
