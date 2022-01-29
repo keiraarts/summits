@@ -13,6 +13,7 @@ impl<X1, Y1> Point<X1, Y1> {
 }
 
 fn main() {
+    // https://users.rust-lang.org/t/confusion-struct-impl-self-trait/3941/4
     println!("Hello, world!");
     let p1 = Point { x: 20, y: 50 };
     let p2 = Point { x: 5, y: 2 };
